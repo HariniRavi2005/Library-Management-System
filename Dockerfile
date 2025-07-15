@@ -18,16 +18,13 @@
 
 
 # Use an OpenJDK image as base
+
+
+# Dockerfile
 FROM openjdk:17-jdk-slim
-
-# Set working directory inside the container
 WORKDIR /app
-
-# Copy the jar file (built later) into the container
 COPY target/*.jar app.jar
-
-# Expose the Spring Boot port
+COPY src/main/webapp/WEB-INF /app/WEB-INF
 EXPOSE 8085
-
-# Run the app
 ENTRYPOINT ["java", "-jar", "app.jar"]
+
