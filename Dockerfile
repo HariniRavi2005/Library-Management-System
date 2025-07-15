@@ -14,17 +14,6 @@ RUN chmod +x mvnw
 
 
 # Run the jar file (update the JAR name if it's different)
-CMD ["java", "-jar", "target/LIBRARY.jar"]
+CMD ["java", "-jar", "target/student-management-system-0.0.1-SNAPSHOT.jar"]
 
-
-# Use an OpenJDK image as base
-
-
-# Dockerfile
-#FROM openjdk:17-jdk-slim
-#WORKDIR /app
-#COPY target/*.jar app.jar
-#COPY src/main/webapp/WEB-INF /app/WEB-INF
-#EXPOSE 8085
-#ENTRYPOINT ["java", "-jar", "app.jar"]
 
